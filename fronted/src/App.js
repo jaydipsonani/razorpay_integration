@@ -32,7 +32,7 @@ function App() {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:5000/orders",
+      url: "https://razorpay-integration-umber.vercel.app/orders",
       headers: {
         'Content-Type': 'application/json'
       },
@@ -85,7 +85,7 @@ function App() {
 
     const paymentId = e.target.paymentId.value;
 
-    axios.get(`http://localhost:5000/payment/${paymentId}`)
+    axios.get(`https://razorpay-integration-umber.vercel.app/payment/${paymentId}`)
     .then((response) => {
       console.log(response.data);
       setResponseState(response.data)
